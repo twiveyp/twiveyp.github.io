@@ -4,13 +4,23 @@
 
 body {
   @include tr(lightgrey);
+  height: 2000px;
+  #sidebarhidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: #1C2541;
+    margin-left: 0vw;
+  }
   .sidebarshown {
     width: 50px;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    // @include bg(pink);
+    // @include tr(pink);
     background-color: #1C2541;
     button {
       outline: none;

@@ -2,8 +2,22 @@ html
   head
     title Twiveyp - GitHub
     link(rel='stylesheet', type='text/css', href='style.css')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js')
+    script(type='text/javascript', src='sidebar.js')
   body
+    div(id="#sidebarhidden")
+      ul
+        li
+          a(href="#")
+        li
+          a(href="#")
+        li
+          a(href="#")
+        li
+          a(href="#")
+        li
+          a(href="#")
     .sidebarshown
-      button(onclick="slide") ||||
+      button(value="off", onClick="slide()") ||||
     .wrapper
       h1 Patrick Twivey's GitHub
