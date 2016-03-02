@@ -9,6 +9,9 @@ function slide() {
 		document.getElementsByTagName("button")[0].setAttribute("value", "off");
 		sidebar.style.marginLeft = "-200px";
 	}
+  $(".wrapper").click(function() {
+      sidebar.style.marginLeft = '-200px';
+  });
 }
 
 

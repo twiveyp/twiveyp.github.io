@@ -60,6 +60,7 @@ body #sidebarhidden #sidebarshown button {
   width: 40px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0;
 }
 body .wrapper {
   width: 80vw;
