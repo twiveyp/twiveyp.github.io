@@ -1,3 +1,39 @@
+@mixin tr($color) {
+  background-color: transparentize($color, 0.5)
+}
+
 body {
-  background-color: grey;
+  @include tr(lightgrey);
+  .sidebarshown {
+    width: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    // @include bg(pink);
+    background-color: #1C2541;
+    button {
+      outline: none;
+      border: none;
+      background-color: inherit;
+      color: #6FFFE9;
+      font-size: 40px;
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+  .wrapper {
+    width: 80vw;
+    margin: 0 auto 0 auto;
+    h1 {
+      color: #1C2541;
+      font: {
+        family: sans-serif;
+        size: 40px;
+      }
+      text-align: center;
+    }
+  }
 }
