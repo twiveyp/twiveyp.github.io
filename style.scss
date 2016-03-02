@@ -21,6 +21,9 @@ body {
     margin-left: -200px;
     transition: 800ms ease;
     z-index: 1;
+    @media screen and (max-width: 400px) {
+      margin-left: -250px;
+    }
     ul {
       float: left;
       list-style: none;
@@ -40,7 +43,6 @@ body {
           }
           text-transform: uppercase;
           width: 100%;
-          transform: 200ms ease;
           &:hover {
             text-decoration: underline;
           }
@@ -69,14 +71,18 @@ body {
         margin: 0;
         position: absolute;
         top: 0;
-        right: 8px;
+        right: 9px;
+        @media screen and (max-width: 400px) {
+          right: 6px;
+        }
       }
     }
   }
-  .wrapper {
+  #wrapper {
     width: 80vw;
     margin: -27px auto 0 auto;
     height: 100%;
+    transform: 800ms ease;
     h1 {
       color: #1C2541;
       font: {
@@ -84,6 +90,7 @@ body {
         size: 40px;
       }
       text-align: center;
+      margin-top: 45px;
     }
   }
 }
