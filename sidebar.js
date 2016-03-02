@@ -2,11 +2,11 @@ function slide() {
 	var value = document.getElementsByTagName("button")[0].getAttribute("value");
 	var sidebar = document.getElementById("sidebarhidden");
 
-	if (value === "off") {
+	if (value == "off") {
 		document.getElementsByTagName("button")[0].setAttribute("value", "on");
 		sidebar.style.marginLeft = "0";
 	} else {
 		document.getElementsByTagName("button")[0].setAttribute("value", "off");
-		sidebar.style.marginLeft = "-20vw";
+		sidebar.style.marginLeft = "-200px";
 	}
 }

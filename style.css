@@ -1,25 +1,56 @@
 body {
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: rgba(211, 211, 211, 0.3);
   height: 2000px;
 }
 body #sidebarhidden {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20vw;
-  height: 100vh;
+  width: 250px;
+  height: 100%;
   background-color: #1C2541;
-  margin-left: 0vw;
+  margin-left: -200px;
+  -webkit-transition: 800ms ease;
+          transition: 800ms ease;
+  z-index: 1;
 }
-body .sidebarshown {
+body #sidebarhidden ul {
+  float: left;
+  list-style: none;
+  margin-left: 10px;
+  top: 50%;
+  height: 100%;
+  position: absolute;
+  margin-top: -69px;
+}
+body #sidebarhidden ul li {
+  text-align: center;
+}
+body #sidebarhidden ul li a {
+  text-decoration: none;
+  color: #6FFFE9;
+  font-family: sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-transform: 200ms ease;
+      -ms-transform: 200ms ease;
+          transform: 200ms ease;
+}
+body #sidebarhidden ul li a:hover {
+  text-decoration: underline;
+}
+body #sidebarhidden #sidebarshown {
   width: 50px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
+  height: 40px;
   background-color: #1C2541;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
-body .sidebarshown button {
+body #sidebarhidden #sidebarshown button {
   outline: none;
   border: none;
   background-color: inherit;
@@ -32,7 +63,8 @@ body .sidebarshown button {
 }
 body .wrapper {
   width: 80vw;
-  margin: 0 auto 0 auto;
+  margin: -27px auto 0 auto;
+  height: 100%;
 }
 body .wrapper h1 {
   color: #1C2541;

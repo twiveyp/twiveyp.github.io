@@ -1,42 +1,78 @@
-@mixin tr($color) {
-  background-color: transparentize($color, 0.5)
+$color1: #05668D;
+$color2: #028090;
+$color3: #00A896;
+$color4: #02C39A;
+$color5: #F0F3BD;
+
+@mixin tr($color, $amount) {
+  background-color: transparentize($color, $amount)
 }
 
 body {
-  @include tr(lightgrey);
+  @include tr(lightgrey, 0.7);
   height: 2000px;
   #sidebarhidden {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20vw;
-    height: 100vh;
+    width: 250px;
+    height: 100%;
     background-color: #1C2541;
-    margin-left: 0vw;
-  }
-  .sidebarshown {
-    width: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    // @include tr(pink);
-    background-color: #1C2541;
-    button {
-      outline: none;
-      border: none;
-      background-color: inherit;
-      color: #6FFFE9;
-      font-size: 40px;
+    margin-left: -200px;
+    transition: 800ms ease;
+    z-index: 1;
+    ul {
+      float: left;
+      list-style: none;
+      margin-left: 10px;
+      top: 50%;
+      height: 100%;
+      position: absolute;
+      margin-top: -69px;
+      li {
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: #6FFFE9;
+          font: {
+            family: sans-serif;
+            size: 25px;
+          }
+          text-transform: uppercase;
+          width: 100%;
+          transform: 200ms ease;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    #sidebarshown {
+      width: 50px;
       height: 40px;
-      width: 40px;
-      overflow: hidden;
-      cursor: pointer;
+      background-color: #1C2541;
+      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      button {
+        outline: none;
+        border: none;
+        background-color: inherit;
+        color: #6FFFE9;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        cursor: pointer;
+      }
     }
   }
   .wrapper {
     width: 80vw;
-    margin: 0 auto 0 auto;
+    margin: -27px auto 0 auto;
+    height: 100%;
     h1 {
       color: #1C2541;
       font: {
